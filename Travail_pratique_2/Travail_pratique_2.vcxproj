@@ -138,6 +138,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Travail_Pratique_2_etudiant\geometrie\t_point2d.cpp" />
+    <ClCompile Include="Travail_Pratique_2_etudiant\principal.cpp" />
+    <ClCompile Include="Travail_Pratique_2_etudiant\utilitaire\utilitaire.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Travail_Pratique_2_etudiant\geometrie\t_point2d.h" />
+    <ClInclude Include="Travail_Pratique_2_etudiant\utilitaire\utilitaire.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
