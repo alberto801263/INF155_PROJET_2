@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Fichiers sources">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="geometrie">
+      <UniqueIdentifier>{0fd3abc6-abfb-4b1f-9b13-01ba42dc2860}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="graphique">
+      <UniqueIdentifier>{a587e6a6-ea7b-4c2a-88c5-9ae0c49f83a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="liste">
+      <UniqueIdentifier>{db68d381-e917-4540-9d65-77675901334e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utilitaire">
+      <UniqueIdentifier>{a16edaca-94a9-4781-9ec2-3b641d5c1f68}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="graphique\winBGIm.cpp">
+      <Filter>graphique</Filter>
+    </ClCompile>
+    <ClCompile Include="principal.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="graphique\winBGIm.h">
+      <Filter>graphique</Filter>
+    </ClInclude>
+    <ClInclude Include="utilitaire\constantes.h">
+      <Filter>utilitaire</Filter>
+    </ClInclude>
+    <ClInclude Include="utilitaire\t_erreur.h">
+      <Filter>utilitaire</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
