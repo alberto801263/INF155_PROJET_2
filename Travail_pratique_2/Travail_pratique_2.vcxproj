@@ -144,6 +144,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Travail_Pratique_2_etudiant\geometrie\t_point2d.h" />
+    <ClInclude Include="Travail_Pratique_2_etudiant\utilitaire\t_erreur.h" />
     <ClInclude Include="Travail_Pratique_2_etudiant\utilitaire\utilitaire.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
