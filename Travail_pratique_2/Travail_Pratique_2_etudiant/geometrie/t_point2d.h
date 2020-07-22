@@ -26,3 +26,9 @@ typedef struct t_point2d* ptr_point2d;
 /****************************************************************************/
 /*							DEFINITIONS DES FONCTIONS						*/
 /****************************************************************************/
+
+ptr_point2d initialiser_point(double x, double y);
+double getX(const ptr_point2d p);
+double getY(const ptr_point2d p);
+void R3_setX(ptr_point2d p, double val_X);
+void R3_setY(ptr_point2d p, double val_Y);

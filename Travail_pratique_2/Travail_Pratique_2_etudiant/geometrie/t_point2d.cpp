@@ -60,15 +60,29 @@ ptr_point2d initialiser_point(double x, double y)
 }
 
 
-//consulter la valeur de la coordonnée X du point reçu
+//consulter la valeur de la coordonnée X du point reçu.
 double getX(const ptr_point2d p)
 {
 	return	p->x;
 }
 
-//consulter la valeur de la coordonnée Y du point reçu
+//consulter la valeur de la coordonnée Y du point reçu.
 double getY(const ptr_point2d p)
 {
 	return p->y;
+}
+
+/* sous-programme public de type mutateur qui permet de modifier la valeur de la coordonnée X du
+point reçu.*/
+void R3_setX(ptr_point2d p, double val_X)
+{
+	p->x = val_X;
+}
+
+/*Ce sous-programme public de type mutateur qui permet de modifier la valeur de la coordonnée Y du
+point reçu.*/
+void R3_setY(ptr_point2d p, double val_Y)
+{
+	p->y = val_Y;
 }
 
