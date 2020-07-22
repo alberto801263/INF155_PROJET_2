@@ -86,3 +86,15 @@ void R3_setY(ptr_point2d p, double val_Y)
 	p->y = val_Y;
 }
 
+//Ce sous-programme public détermine si deux points sont alignés sur une même ligne horizontale.
+int point_sur_la_meme_ligne(ptr_point2d p1, ptr_point2d p2)
+{
+	if (fabs(p1->y - p2->y)<0.00001)
+	{
+		return 1;
+	}
+	else
+	{
+		return 0;
+	}
+}
