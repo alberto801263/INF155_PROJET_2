@@ -61,13 +61,13 @@ ptr_point2d initialiser_point(double x, double y)
 
 
 //consulter la valeur de la coordonnée X du point reçu.
-double getX(const ptr_point2d p)
+double getX(ptr_point2d p)
 {
 	return	p->x;
 }
 
 //consulter la valeur de la coordonnée Y du point reçu.
-double getY(const ptr_point2d p)
+double getY(ptr_point2d p)
 {
 	return p->y;
 }
