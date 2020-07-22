@@ -12,7 +12,7 @@
 /****************************************************************************/
 /*							COMMANDES PREPROCESSEUR							*/
 /****************************************************************************/
-#ifndef __MODULE_POINTS_R3__
+
 #define __MODULE_POINTS_R3__ 
 
 
@@ -20,7 +20,7 @@
 /*							DEFINITIONS DES TYPES							*/
 /****************************************************************************/
 // Pointeur d'un ptr_R3 - pointeur vers un point dans l'espace.
-typedef struct t_R3* ptr_R3;
+typedef struct t_point2d* ptr_point2d;
 
 
 /****************************************************************************/

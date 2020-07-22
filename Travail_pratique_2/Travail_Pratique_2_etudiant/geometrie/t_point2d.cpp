@@ -19,33 +19,21 @@
 /****************************************************************************/
 /*							DEFINITIONS DES CONSTANTES						*/
 /****************************************************************************/
-#define PI 3.141592653
-#define PI2 6.283185305
 
 /****************************************************************************/
 /*							DEFINITIONS DES TYPES							*/
 /****************************************************************************/
 // Un t_R3 a classiquement trois composantes en rectangulaire
 // qui représente un point dans l'espace
-struct ptr_point2d
+struct t_point2d
 {
 	double x;
 	double y;
 };
-typedef struct ptr_point2d* ptr_position;
+
 /****************************************************************************/
 /*							DECLARATION DES FONCTIONS PRIVÉES				*/
 /****************************************************************************/
-/*
-	REEL_ALEA
-	Fonction qui retourne un nombre réel aéaltoire compris
-	entre [0,1].
-
-	Paramètre : Aucun
-	Retour : Un réel aléatoire (TYPE: double)
-*/
-static double reel_alea(void);
-
 
 /****************************************************************************/
 /*							DÉFINITION DES FONCTIONS PUBLIQUES				*/
@@ -59,18 +47,28 @@ static double reel_alea(void);
 	RETOUR :		l'adresse du point créer
 	SPÉCIFICATION :
 */
-ptr_point2d t_point2d(double x, double y) 
+ptr_point2d initialiser_point(double x, double y) 
 {
 
-	ptr_point2d point;
-
 	// Allocation mémoire de la structure.
-	ptr_position point = (ptr_position)malloc(sizeof(struct ptr_point2d));
+	ptr_point2d point = (ptr_point2d)malloc(sizeof(struct t_point2d));
 
-
-	point.x = x;
-	point.y = y;
-	
+	point-> x = x;
+	point-> y = y;	
 
 	return point;
 }
+
+
+//consulter la valeur de la coordonnée X du point reçu
+double getX(const ptr_point2d p)
+{
+	return	p->x;
+}
+
+//consulter la valeur de la coordonnée Y du point reçu
+double getY(const ptr_point2d p)
+{
+	return p->y;
+}
+
