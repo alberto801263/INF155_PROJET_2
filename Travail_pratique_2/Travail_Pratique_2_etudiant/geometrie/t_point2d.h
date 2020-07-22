@@ -1,5 +1,5 @@
 /*****************************************************************************
-	Par        :	
+	Par        :	David Beaulieu et Hugues Saulnier
 	Revise le  :	juin 2020
 	Fichier    :	R3.h
 	Objectifs  :	La création d'un type bien réel : les vecteurs et les points de l'espace
@@ -20,4 +20,9 @@
 /*							DEFINITIONS DES TYPES							*/
 /****************************************************************************/
 // Pointeur d'un ptr_R3 - pointeur vers un point dans l'espace.
-typedef struct Premier_point* ptr_premier;
+typedef struct t_R3* ptr_R3;
+
+
+/****************************************************************************/
+/*							DEFINITIONS DES FONCTIONS						*/
+/****************************************************************************/
