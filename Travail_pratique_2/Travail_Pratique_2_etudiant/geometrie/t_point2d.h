@@ -33,3 +33,5 @@ double getY(const ptr_point2d p);
 void R3_setX(ptr_point2d p, double val_X);
 void R3_setY(ptr_point2d p, double val_Y);
 int point_sur_la_meme_ligne(ptr_point2d p1, ptr_point2d p2);
+int point_sur_la_meme_colonne(ptr_point2d p1, ptr_point2d p2);
+double distance_entre_points(ptr_point2d p1, ptr_point2d p2);
