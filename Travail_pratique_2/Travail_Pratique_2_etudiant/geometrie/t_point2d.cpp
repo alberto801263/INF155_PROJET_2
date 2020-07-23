@@ -1,8 +1,8 @@
 /*****************************************************************************
-	Par        :	David Beaulieu et Hugues Saulnier
-	Revise le  :	juin 2020
-	Fichier    :	R3.c
-	Objectifs  :	Librairie qui permet de modéliser un point dans l'espace
+	Par        :	Alberto,Habib
+	Revise par :	Mitch
+	Fichier    :	TP2.c
+	Objectifs  :	TP2
 	Note	   :	NA
 *****************************************************************************/
 
@@ -31,6 +31,7 @@ struct t_point2d
 	double y;
 };
 
+
 /****************************************************************************/
 /*							DECLARATION DES FONCTIONS PRIVÉES				*/
 /****************************************************************************/
@@ -40,56 +41,88 @@ struct t_point2d
 /****************************************************************************/
 
 /*
-	NOM	:			t_point2d
-	DEF :			Fonction constructeur qui permet de créer un nouveau point
-					Selon les valeurs donnée en paramètre
-	PARAMETRES :	Aucun
-	RETOUR :		l'adresse du point créer
-	SPÉCIFICATION :
+	NOM	:			initialiser_point
+	DEF :			Ce sous-programme public initialise le contenu d'un point
+					avec les coordonnées reçues.
+	PARAMETRES :	x:La coordonnée en x du point à initialiser.
+					y:La coordonnée en y du point à initialiser.
+	RETOUR :		ptr_point2d:Un pointeur vers le nouveau point initialisé.
 */
-ptr_point2d initialiser_point(double x, double y) 
+ptr_point2d initialiser_point(double x, double y)
 {
 
 	// Allocation mémoire de la structure.
 	ptr_point2d point = (ptr_point2d)malloc(sizeof(struct t_point2d));
 
-	point-> x = x;
-	point-> y = y;	
+	point->x = x;
+	point->y = y;
 
 	return point;
 }
 
-
-//consulter la valeur de la coordonnée X du point reçu.
-double getX(ptr_point2d p)
+/*
+	NOM	:			getX
+	DEF :			Ce sous-programme public de type informateur qui permet
+					de consulter la valeur de la coordonnée X du point reçu.
+	PARAMETRES :	ptr_point2d p:L'adresse d'un point 2D.
+	RETOUR :		p->x:La valeur de X.
+*/
+double getX(const ptr_point2d p)
 {
 	return	p->x;
 }
 
-//consulter la valeur de la coordonnée Y du point reçu.
-double getY(ptr_point2d p)
+/*
+	NOM	:			getY
+	DEF :			Ce sous-programme public de type informateur qui permet
+					de consulter la valeur de la coordonnée Y du point reçu.
+	PARAMETRES :	ptr_point2d p:L'adresse d'un point 2D.
+	RETOUR :		p->y:La valeur de Y.
+*/
+double getY(const ptr_point2d p)
 {
 	return p->y;
 }
 
-/* sous-programme public de type mutateur qui permet de modifier la valeur de la coordonnée X du
-point reçu.*/
-void R3_setX(ptr_point2d p, double val_X)
+/*
+	NOM	:			setX
+	DEF :			Ce sous-programme public de type mutateur qui permet de
+					modifier la valeur de la coordonnée X du point reçu.
+	PARAMETRES :	ptr_point2d p:L'adresse d'un point 2D.
+					val_x:La nouvelle valeur de X.
+	RETOUR :		N/A
+*/
+void setX(ptr_point2d p, double val_X)
 {
 	p->x = val_X;
 }
 
-/*Ce sous-programme public de type mutateur qui permet de modifier la valeur de la coordonnée Y du
-point reçu.*/
-void R3_setY(ptr_point2d p, double val_Y)
+/*
+	NOM	:			setY
+	DEF :			Ce sous-programme public de type mutateur qui permet de
+					modifier la valeur de la coordonnée Y du point reçu.
+	PARAMETRES :	ptr_point2d p:L'adresse d'un point 2D.
+					val_y:La nouvelle valeur de Y.
+	RETOUR :		N/A
+*/
+void setY(ptr_point2d p, double val_Y)
 {
 	p->y = val_Y;
 }
 
-//Ce sous-programme public détermine si deux points sont alignés sur une même ligne horizontale.
-int point_sur_la_meme_ligne(ptr_point2d p1, ptr_point2d p2)
+/*
+	NOM	:			point_sur_la_meme_ligne
+	DEF :			Ce sous-programme public détermine si deux points sont
+					alignés sur une même ligne horizontale.
+	PARAMETRES :	ptr_point2d p1:L'adresse d'un premier point 2D.
+					ptr_point2d p2:• L'adresse d'un second point 2D.
+	RETOUR :		Retourne 1: lorsque les deux points sont sur une même ligne
+								horizontale.
+					Retourne 0: Sinon on retourne 0.
+*/
+int point_sur_la_meme_ligne(const ptr_point2d p1, const ptr_point2d p2)
 {
-	if (fabs(p1->y - p2->y)<0.00001)
+	if (fabs(p1->y - p2->y) < 0.00001)
 	{
 		return 1;
 	}
@@ -99,8 +132,17 @@ int point_sur_la_meme_ligne(ptr_point2d p1, ptr_point2d p2)
 	}
 }
 
-//Ce sous-programme public détermine si deux points sont alignés sur une même ligne verticale.
-int point_sur_la_meme_colonne(ptr_point2d p1, ptr_point2d p2)
+/*
+	NOM	:			point_sur_la_meme_colonne
+	DEF :			Ce sous-programme public détermine si deux points sont alignés sur
+					une même ligne verticale.
+	PARAMETRES :	ptr_point2d p1:L'adresse d'un premier point 2D.
+					ptr_point2d p2:• L'adresse d'un second point 2D.
+	RETOUR :		Retourne 1: lorsque les deux points sont sur une même ligne
+								verticale.
+					Retourne 0: Sinon on retourne 0.
+*/
+int point_sur_la_meme_colonne(const ptr_point2d p1, const ptr_point2d p2)
 {
 	if (fabs(p1->x - p2->x) < 0.00001)
 	{
@@ -112,16 +154,81 @@ int point_sur_la_meme_colonne(ptr_point2d p1, ptr_point2d p2)
 	}
 }
 
-//Ce sous - programme public calcule la distance entre deux points.
-double distance_entre_points(ptr_point2d p1, ptr_point2d p2)
+/*
+	NOM	:			distance_entre_points
+	DEF :			Ce sous-programme public calcule la distance entre deux points.
+	PARAMETRES :	ptr_point2d p1:L'adresse d'un premier point 2D.
+					ptr_point2d p2:• L'adresse d'un second point 2D.
+	RETOUR :		distance:Retourne la distance entre le point1 et le point2.
+*/
+double distance_entre_points(const ptr_point2d p1, const ptr_point2d p2)
 {
 	double distance;
+	double deltaX_carree;
+	double deltaY_carree;
+
+	deltaX_carree = (p2->x - p1->x) * (p2->x - p1->x);
+	deltaY_carree = (p2->y - p1->y) * (p2->y - p1->y);
+	distance = sqrt(deltaX_carree + deltaY_carree);
+
+	return distance;
+}
+/*
+	NOM	:			points_sont_identiques
+	DEF :			Ce sous-programme public détermine si deux points sont considérés
+					comme étant identiques.
+	PARAMETRES :	ptr_point2d p1:L'adresse d'un premier point 2D.
+					ptr_point2d p2:L'adresse d'un second point 2D.
+	RETOUR :		Retourne 1:  lorsque les deux coordonnées en x sont considérées
+					égales et lorsque les deux coordonnées en y sont considérées égales.
+					Retourne 0: Sinon on retourne 0.
+*/
+int points_sont_identiques(const ptr_point2d p1, const ptr_point2d p2)
+{
+	if (fabs(p1->y - p2->y) < 0.00001 && fabs(p1->x - p2->x) < 0.00001)
+	{
+		return 1;
+	}
+	else
+	{
+		return 0;
+	}
+}
+
+/*
+	NOM	:			pente
+	DEF :			Ce sous-programme public calcule la pente entre deux points.
+	PARAMETRES :	ptr_point2d p1:L'adresse d'un premier point 2D.
+					ptr_point2d p2:L'adresse d'un second point 2D.
+	RETOUR :		Pente:Retourne la pente entre les deux points.
+*/
+double pente(const ptr_point2d p1, const ptr_point2d p2)
+{
+	double pente;
 	double deltaX;
 	double deltaY;
 
-	deltaX = (p2->x - p1->x) * (p2->x - p1->x);
-	deltaY = (p2->y - p1->y) * (p2->y - p1->y);
-	distance = sqrt(deltaX + deltaY);
+	deltaX = (p2->x - p1->x);
+	deltaY = (p2->y - p1->y);
+	pente = deltaX / deltaY;
 
-	return distance;
+	return pente;
+}
+
+/*
+	NOM	:			point_milieu
+	DEF :			Ce sous-programme public calcule le point milieu entre deux points.
+	PARAMETRES :	ptr_point2d p1:L'adresse d'un premier point 2D.
+					ptr_point2d p2:L'adresse d'un second point 2D.
+	RETOUR :		 pointMil:Retourne l'adresse du nouveau point milieu.
+*/
+ptr_pointMil point_milieu(const ptr_point2d p1, const ptr_point2d p2)
+{
+	ptr_pointMil pointMil = (ptr_point2d)malloc(sizeof(struct t_point2d));
+
+
+	pointMil->x = (p1->x + p2->x) / 2;
+	pointMil->y = (p1->y + p2->y) / 2;
+
+	return pointMil;
 }

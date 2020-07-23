@@ -24,6 +24,9 @@
     <ClCompile Include="Travail_Pratique_2_etudiant\geometrie\t_point2d.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="Travail_Pratique_2_etudiant\geometrie\t_segment.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Travail_Pratique_2_etudiant\utilitaire\utilitaire.h">
@@ -33,6 +36,9 @@
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="Travail_Pratique_2_etudiant\utilitaire\t_erreur.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Travail_Pratique_2_etudiant\geometrie\t_segment.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>

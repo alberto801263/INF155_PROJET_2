@@ -139,11 +139,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Travail_Pratique_2_etudiant\geometrie\t_point2d.cpp" />
+    <ClCompile Include="Travail_Pratique_2_etudiant\geometrie\t_segment.cpp" />
     <ClCompile Include="Travail_Pratique_2_etudiant\principal.cpp" />
     <ClCompile Include="Travail_Pratique_2_etudiant\utilitaire\utilitaire.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Travail_Pratique_2_etudiant\geometrie\t_point2d.h" />
+    <ClInclude Include="Travail_Pratique_2_etudiant\geometrie\t_segment.h" />
     <ClInclude Include="Travail_Pratique_2_etudiant\utilitaire\t_erreur.h" />
     <ClInclude Include="Travail_Pratique_2_etudiant\utilitaire\utilitaire.h" />
   </ItemGroup>
