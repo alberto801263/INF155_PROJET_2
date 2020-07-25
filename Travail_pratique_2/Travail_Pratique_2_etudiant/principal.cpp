@@ -18,11 +18,17 @@
 //#include "t_orthocentre.h"
 //#include "t_point2d.h"
 
-#include "winBGim.h"
+/*!!!!!!!!!!!!!!!!!!!!!!!1*/
+//#include "winBGim.h"
 //#include "m_interface.h"
 
-#include "t_erreur.h"
+/*!!!!!!!!!!!!!!!!!!!!1*/
+//#include "t_erreur.h"
 
+/*Nos fichier*/
+
+/*POUQUOI*/
+#include "geometrie/t_segment.h"
 
 /***************************************************************************
 							DEFINITION DE TYPES ET CONSTANTES
@@ -57,7 +63,7 @@
 		En cas de succes, elle retourne SUCCES, sinon elle retourne une des
 		code d'erreurs de l'enum t_erreur.
 */
-t_erreur initialiser_mode_graphique(void);
+//t_erreur initialiser_mode_graphique(void);
 
 
 
@@ -66,18 +72,34 @@ t_erreur initialiser_mode_graphique(void);
 /*************************************************************************/
 int main(void)
 {
-	int retour;             // L'état de succès/d'échec des différentes
+	/*TEST*/
+	/********************************************************************/
+	testInitialiserPoint();
+	
+
+	/********************************************************************/
+
+
+	/*!!!!!!!!!1*/
+	//int retour;             // L'état de succès/d'échec des différentes
 							// étapes de l'application.
 
 
 	//ptr_graphe un_graphe;    // Le diagramme de Voronoi à créer
 
 	// On tente de passer en mode graphique.
-	if ((retour = initialiser_mode_graphique()) != SUCCES)
-	{
-		printf("%s\n", MESSAGES_ERREURS[retour]);
-		return EXIT_FAILURE;
-	}
+	
+	  /*!!!!!!!!!!!!!!!!ERREUR!!!!!!!!!!!!!!!!!!!!!*/
+	//
+	//if ((retour = initialiser_mode_graphique()) != SUCCES)
+	//{
+	//	printf("%s\n", MESSAGES_ERREURS[retour]);
+	//	return EXIT_FAILURE;
+	//}
+	//
+	
+	
+	
 	/*
 	// On initialise la taille limite du diagramme de voronoi.
 	un_graphe = nouveau_graphe(XMIN, YMIN, XMAX, YMAX);
@@ -119,16 +141,17 @@ int main(void)
 /*                                DEFINITIONS DE FONCTIONS               */
 /*************************************************************************/
 
+/*!!!!!!!!!!!!!!!ERREUR!!!!!!!!!!!!!!!!!!!!!!!!!1*/
 
 //
 // Cette fonction crée la fenêtre dans laquelle le diagramme sera affiché.
 //
-t_erreur initialiser_mode_graphique(void)
-{
-	// On initialise le mode graphique.
-	int gdriver = DETECT, gmode;
-	initgraph(&gdriver, &gmode, "");
-
-	// On retourne si l'opération a fonctionné ou non.
-	return (graphresult() == grOk) ? (SUCCES) : (ERREUR_GRAPHIQUE);
-}
+//t_erreur initialiser_mode_graphique(void)
+//{
+//	// On initialise le mode graphique.
+//	int gdriver = DETECT, gmode;
+//	initgraph(&gdriver, &gmode, "");
+//
+//	// On retourne si l'opération a fonctionné ou non.
+//	return (graphresult() == grOk) ? (SUCCES) : (ERREUR_GRAPHIQUE);
+//}

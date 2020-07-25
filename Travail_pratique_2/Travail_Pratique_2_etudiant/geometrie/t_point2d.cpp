@@ -13,8 +13,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include<math.h>
-
 #include"t_point2d.h"
+
 
 /****************************************************************************/
 /*							DEFINITIONS DES CONSTANTES						*/
@@ -23,8 +23,7 @@
 /****************************************************************************/
 /*							DEFINITIONS DES TYPES							*/
 /****************************************************************************/
-// Un t_R3 a classiquement trois composantes en rectangulaire
-// qui représente un point dans l'espace
+
 struct t_point2d
 {
 	double x;
@@ -231,4 +230,9 @@ ptr_pointMil point_milieu(const ptr_point2d p1, const ptr_point2d p2)
 	pointMil->y = (p1->y + p2->y) / 2;
 
 	return pointMil;
+}
+void affiche_point(ptr_point2d p)
+{
+	printf("X= %.2f\n", p->x);
+	printf("Y= %.2f\n",p->y);
 }

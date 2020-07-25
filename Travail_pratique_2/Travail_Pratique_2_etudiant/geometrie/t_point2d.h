@@ -36,3 +36,6 @@ double distance_entre_points(ptr_point2d p1, ptr_point2d p2);
 int points_sont_identiques(const ptr_point2d p1, const ptr_point2d p2);
 double pente(const ptr_point2d p1, const ptr_point2d p2);
 ptr_pointMil point_milieu(const ptr_point2d p1, const ptr_point2d p2);
+
+
+void affiche_point(ptr_point2d p);

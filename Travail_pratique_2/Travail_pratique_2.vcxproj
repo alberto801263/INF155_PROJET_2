@@ -144,6 +144,8 @@
     <ClCompile Include="Travail_Pratique_2_etudiant\utilitaire\utilitaire.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="minunit-master\minunit.h" />
+    <ClInclude Include="Travail_Pratique_2_etudiant\geometrie\minunit.h" />
     <ClInclude Include="Travail_Pratique_2_etudiant\geometrie\t_point2d.h" />
     <ClInclude Include="Travail_Pratique_2_etudiant\geometrie\t_segment.h" />
     <ClInclude Include="Travail_Pratique_2_etudiant\utilitaire\t_erreur.h" />

@@ -41,5 +41,11 @@
     <ClInclude Include="Travail_Pratique_2_etudiant\geometrie\t_segment.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
+    <ClInclude Include="minunit-master\minunit.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Travail_Pratique_2_etudiant\geometrie\minunit.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
